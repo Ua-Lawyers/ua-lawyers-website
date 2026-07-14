@@ -20,7 +20,7 @@ export const nav = [
 ] as const;
 
 export const stats = [
-  { value: "14+", label: "Legal Practice Experience" },
+  { value: "12+", label: "Legal Practice Experience" },
   { value: "1600+", label: "Clients Served" },
   { value: "2300+", label: "Cases Handled" },
 ] as const;
