@@ -28,7 +28,11 @@ export default function PeopleGrid({
 
   return (
     <>
-      <ul className="flex flex-wrap gap-2" role="tablist" aria-label="Filter by practice area">
+      <ul
+        className="flex flex-wrap items-center gap-x-1 gap-y-2 border-b border-hairline pb-3"
+        role="tablist"
+        aria-label="Filter by practice area"
+      >
         {filters.map((f) => (
           <li key={f} role="presentation">
             <button
@@ -36,10 +40,10 @@ export default function PeopleGrid({
               role="tab"
               aria-selected={active === f}
               onClick={() => setActive(f)}
-              className={`rounded-sm border px-4 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-sm px-4 py-2 text-sm font-medium transition-colors ${
                 active === f
-                  ? "border-brand bg-brand text-white"
-                  : "border-hairline text-ink hover:border-brand hover:text-brand"
+                  ? "bg-brand text-white"
+                  : "text-ink-muted hover:text-brand"
               }`}
             >
               {f}
@@ -48,14 +52,14 @@ export default function PeopleGrid({
         ))}
       </ul>
 
-      <ul className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+      <ul className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
         {visible.map((person) => (
-          <li key={person.slug}>
+          <li key={person.slug} className="flex">
             <Link
               href={`/portfolio-item/${person.slug}`}
-              className="group block text-center"
+              className="group flex w-full flex-col"
             >
-              <div className="relative aspect-square overflow-hidden rounded-md bg-section">
+              <div className="relative aspect-square overflow-hidden rounded-t-md bg-white">
                 <Image
                   src={person.photo}
                   alt={person.name}
@@ -64,10 +68,12 @@ export default function PeopleGrid({
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mt-4 font-semibold transition-colors group-hover:text-brand">
-                {person.name}
-              </h3>
-              <p className="text-sm text-ink-muted">{person.role}</p>
+              <div className="flex flex-1 flex-col justify-center rounded-b-md bg-white px-3 py-3.5 text-center">
+                <h3 className="text-sm font-semibold transition-colors group-hover:text-brand">
+                  {person.name}
+                </h3>
+                <p className="mt-0.5 text-xs text-ink-muted">{person.role}</p>
+              </div>
             </Link>
           </li>
         ))}

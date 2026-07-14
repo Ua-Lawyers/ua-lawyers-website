@@ -13,29 +13,39 @@ export const metadata: Metadata = {
 export default function OurServicesPage() {
   return (
     <>
-      <PageHero title="Expert Legal Services" crumbs={[{ label: "Our Services" }]} />
+      <PageHero
+        title="Expert Legal Services"
+        subtitle="Tailored Legal Solutions, Proven Results."
+        crumbs={[{ label: "Our Services" }]}
+        image="/images/heroes/services.jpg"
+        className="pb-24 sm:pb-32"
+      />
 
-      <section className="bg-white py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="max-w-2xl text-2xl font-semibold tracking-tight sm:text-3xl">
-            Tailored Legal Solutions, Proven Results.
-          </h2>
-
-          <ul className="mt-14 grid gap-10 md:grid-cols-2">
+      {/* The cards ride up over the bottom of the hero, as they do on the live site. */}
+      <section className="bg-section pb-20 sm:pb-24">
+        <div className="relative z-10 mx-auto -mt-20 max-w-6xl px-6 sm:-mt-28">
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <li key={s.slug} className="border-t border-hairline pt-7">
-                <h3 className="text-xl font-semibold">
-                  <Link href={`/${s.slug}`} className="transition-colors hover:text-brand">
-                    {s.name}
+              <li key={s.slug} className="flex">
+                <div className="flex w-full flex-col rounded-md bg-white p-8 text-center">
+                  <h2 className="text-xl font-semibold">
+                    <Link
+                      href={`/${s.slug}`}
+                      className="transition-colors hover:text-brand"
+                    >
+                      {s.name}
+                    </Link>
+                  </h2>
+                  <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-muted">
+                    {s.summary}
+                  </p>
+                  <Link
+                    href={`/${s.slug}`}
+                    className="mx-auto mt-7 inline-block rounded-sm border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition-colors hover:bg-brand hover:text-white"
+                  >
+                    Learn more
                   </Link>
-                </h3>
-                <p className="mt-3 leading-relaxed text-ink-muted">{s.summary}</p>
-                <Link
-                  href={`/${s.slug}`}
-                  className="mt-5 inline-block text-sm font-semibold text-brand hover:underline"
-                >
-                  Learn more →
-                </Link>
+                </div>
               </li>
             ))}
           </ul>

@@ -16,7 +16,8 @@ export default function PostDetail({ post }: { post: Post }) {
       <PageHero
         title={post.heading}
         crumbs={[{ label: "Insights", href: "/blog" }, { label: post.heading }]}
-        image={post.image}
+        image="/images/heroes/insights.png"
+        align="center"
       />
 
       <article className="bg-white py-16 sm:py-20">

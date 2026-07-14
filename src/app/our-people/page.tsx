@@ -21,15 +21,23 @@ export default function OurPeoplePage() {
 
   return (
     <>
-      <PageHero title="Our People" crumbs={[{ label: "Our People" }]} />
+      <PageHero
+        title="Our People"
+        subtitle="Your Trusted Legal Partners"
+        crumbs={[{ label: "Our People" }]}
+        image="/images/brand/hero-red-stairs.jpg"
+      />
 
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-section py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Your Trusted Legal Partners
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+              Trusted. Tenacious.
+              <br />
+              On Your Side.
             </h2>
-            <p className="mt-5 leading-relaxed text-ink-muted">
+            <span className="mt-5 block h-0.5 w-12 bg-brand" />
+            <p className="mt-6 text-sm leading-relaxed text-ink-muted">
               UA Lawyers consists of four partners, eight practicing lawyers, and several
               legal assistants, all alumni of top Australian universities. With diverse
               industry backgrounds, our team provides multidisciplinary legal solutions and
@@ -37,7 +45,7 @@ export default function OurPeoplePage() {
             </p>
           </div>
 
-          <div className="mt-14">
+          <div className="mt-12">
             <PeopleGrid entries={entries} filters={practiceAreaFilters()} />
           </div>
         </div>

@@ -76,7 +76,7 @@ export default function HomePage() {
         {/* Latest insights */}
         <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((p) => (
+            {posts.slice(0, 3).map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/${p.slug}`}
