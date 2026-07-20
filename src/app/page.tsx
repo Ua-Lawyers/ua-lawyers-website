@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
 import ServiceIcon from "@/components/ServiceIcon";
+import TeamCarousel from "@/components/TeamCarousel";
 import { services } from "@/data/services";
-import { people } from "@/data/people";
 import { posts } from "@/data/posts";
 import { stats } from "@/data/site";
 
@@ -120,36 +120,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Swipeable on phones, a full row on wide screens. */}
-            <ul className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:px-0">
-              {people.map((person) => (
-                <li
-                  key={person.slug}
-                  className="flex w-40 shrink-0 snap-start sm:w-48 lg:w-auto lg:flex-1"
-                >
-                  <Link
-                    href={`/portfolio-item/${person.slug}`}
-                    className="group flex w-full flex-col"
-                  >
-                    <div className="relative aspect-square overflow-hidden rounded-t-md bg-white">
-                      <Image
-                        src={person.photo}
-                        alt={person.name}
-                        fill
-                        sizes="(min-width: 1024px) 15vw, 45vw"
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col justify-center rounded-b-md bg-white px-3 py-3 text-center">
-                      <p className="text-sm font-semibold transition-colors group-hover:text-brand">
-                        {person.name}
-                      </p>
-                      <p className="mt-0.5 text-xs text-ink-muted">{person.role}</p>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <TeamCarousel />
           </div>
         </section>
 
