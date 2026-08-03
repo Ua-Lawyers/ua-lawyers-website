@@ -3,7 +3,7 @@ export const site = {
   shortName: "UA Lawyers",
   url: "https://ualawyers.com.au",
   phone: "(03) 8637 0821",
-  email: "info@ualawyers.com.au",
+  email: "admin@ualawyers.com.au",
   address: {
     line1: "Level 12, 350 Collins Street",
     line2: "Melbourne VIC 3000",
