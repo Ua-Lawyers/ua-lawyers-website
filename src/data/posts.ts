@@ -1,7 +1,7 @@
 export type Block =
   | { type: "p"; text: string; emphasis?: "italic" | "bold" }
   | { type: "h3"; text: string }
-  | { type: "ul"; items: string[] };
+  | { type: "ul"; items: (string | { lead: string; text: string })[] };
 
 export type Post = {
   slug: string;
@@ -18,6 +18,40 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "hidden-price-of-wholesale-client-status",
+    title:
+      "The Hidden Price of the “Wholesale Client” Status: What Australian Legal Protections Are You Giving Up?",
+    heading:
+      "The Hidden Price of the “Wholesale Client” Status: What Australian Legal Protections Are You Giving Up?",
+    metaDesc:
+      "Becoming a “Wholesale Client” or “Sophisticated Investor” in Australia can unlock exclusive deals, but it strips away key legal protections. Learn what you give up and how to protect your capital.",
+    date: "2026-08-20",
+    image: "/images/posts/will.jpg",
+    categories: ["Commercial Litigation", "Legal Insights"],
+    tags: ["investment"],
+    body: [
+      { type: "p", text: "In the Australian investment landscape, high-net-worth individuals seeking access to premium private equity, unlisted property funds, or high-yield financial products frequently encounter a specific threshold: the offering is restricted to “Wholesale Clients” or “Sophisticated Investors”." },
+      { type: "p", text: "To cross this threshold, investors routinely obtain a certificate from their accountant verifying their income or net assets. While many view this certificate as a \"VIP pass\" to exclusive wealth-building opportunities, the brutal legal reality is quite different. By handing over this document, you are voluntarily stripping yourself of fundamental statutory protections under Australian consumer and financial law." },
+      { type: "p", text: "As a commercial litigation team handling complex disputes, we frequently see the devastating consequences of this misunderstanding. Here is the hidden price you pay for that “Wholesale” title." },
+      { type: "h3", text: "Cost 1: Losing the AFCA Safety Net" },
+      { type: "p", text: "For retail investors, the Australian Financial Complaints Authority (AFCA) is a powerful, cost-free shield. If a retail client faces misleading conduct, fraud, or unreasonable delays in redemptions, AFCA provides an accessible dispute resolution mechanism whose decisions are binding on financial institutions." },
+      { type: "p", text: "However, AFCA’s jurisdiction generally excludes Wholesale Clients. Once a fund manager presents your Wholesale Certificate during a dispute, AFCA is highly likely to dismiss your complaint for lack of jurisdiction. Consequently, if your $500,000 or $1 million investment is unfairly locked up, your only viable recourse is to initiate commercial litigation in the Supreme Court—a gruelling process where legal fees can quickly exceed $100,000 with no guaranteed outcome." },
+      { type: "h3", text: "Cost 2: Surrendering Defenses Against “Draconian” Clauses" },
+      { type: "p", text: "Australia has a robust Unfair Contract Terms (UCT) regime designed to void heavily one-sided clauses. Yet, under Australian contract law, Wholesale Clients are legally presumed to be wealthy, experienced, and highly capable of engaging independent legal counsel." },
+      { type: "p", text: "Consequently, courts rarely intervene to strike down harsh commercial terms agreed upon by a wholesale investor. Fund managers routinely weaponize this legal presumption by embedding highly restrictive clauses in their Information Memorandums (IM):" },
+      { type: "ul", items: [
+        { lead: "The Irrevocable Offer:", text: "You may regret your transfer the very next day and demand a refund. However, if the fine print dictates that your application constitutes an \"irrevocable offer,\" your revocation is legally void. The fund can lawfully ignore your withdrawal, accept your offer weeks later, and trap your capital in a mandatory 12-month lock-up period." },
+        { lead: "Entire Agreement & No Reliance:", text: "Sales representatives might make grand verbal promises or send translated summaries via WhatsApp guaranteeing liquidity. But if you sign an IM containing a \"No Reliance\" clause, you formally acknowledge that you relied solely on the English IM text. In court, verbal promises evaporate; only the ink on the contract matters." },
+        { lead: "The \"Professional Advice\" Shield:", text: "IMs often force you to declare that you have sought independent legal and financial advice. This acts as a perfect liability shield for the fund. You cannot successfully argue in court that the trust structure was \"too complex\" or that your English wasn't proficient enough to understand the risks." },
+      ] },
+      { type: "h3", text: "Conclusion" },
+      { type: "p", text: "Many astute business people blindly sign 80-page English Information Memorandums based on blind trust in their financial brokers. By the time a dispute arises, they discover that top-tier compliance lawyers have flawlessly shifted all commercial risks onto them through binding contracts." },
+      { type: "p", text: "Our Advice: Before you commit capital as a Wholesale Client, it is imperative to have an Australian commercial lawyer conduct a meticulous \"mine-sweeping\" review of the IM and subscription agreement. A modest upfront investment in a legal review can clarify lock-up periods, hidden management fees, and redemption restrictions—ultimately saving you hundreds of thousands in future litigation costs. Protect your wealth before the ink dries." },
+      { type: "p", emphasis: "italic", text: "Disclaimer: The information provided in this article is for general informational purposes only and does not constitute formal legal advice." },
+      { type: "p", emphasis: "bold", text: "If you are currently navigating a complex shareholder dispute or need to formalize a nominee arrangement to protect your assets, contact the experienced litigation team at United Associates Barristers and Solicitors today to safeguard your commercial interests." },
+    ],
+  },
   {
     slug: "hidden-legal-risks-of-nominee-agreements",
     title:

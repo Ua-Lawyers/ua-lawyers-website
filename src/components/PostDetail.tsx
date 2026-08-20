@@ -63,9 +63,15 @@ export default function PostDetail({ post }: { post: Post }) {
               if (block.type === "ul")
                 return (
                   <ul key={i}>
-                    {block.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
+                    {block.items.map((item) =>
+                      typeof item === "string" ? (
+                        <li key={item}>{item}</li>
+                      ) : (
+                        <li key={item.lead}>
+                          <strong>{item.lead}</strong> {item.text}
+                        </li>
+                      ),
+                    )}
                   </ul>
                 );
               return (
