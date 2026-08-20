@@ -1,5 +1,5 @@
 export type Block =
-  | { type: "p"; text: string }
+  | { type: "p"; text: string; emphasis?: "italic" | "bold" }
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] };
 
@@ -18,6 +18,42 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "hidden-legal-risks-of-nominee-agreements",
+    title:
+      "Are Your Shares Safe? The Hidden Legal Risks of ‘Nominee’ Agreements in Australia",
+    heading:
+      "Are Your Shares Safe? The Hidden Legal Risks of ‘Nominee’ Agreements in Australia",
+    metaDesc:
+      "Nominee share arrangements are common in Australia, but without a written agreement they can lead to costly disputes. Learn the hidden legal risks and how to protect your investment.",
+    date: "2026-08-20",
+    image: "/images/posts/property.jpg",
+    categories: ["Commercial Litigation", "Legal Insights"],
+    tags: ["shares"],
+    body: [
+      { type: "p", text: "In the vibrant business landscape of Australia, it is not uncommon for entrepreneurs and investors to use ‘nominee’ structures. Whether for privacy, administrative convenience, or managing cross-border investments, a party (the nominee) will often hold shares or assets on behalf of another party (the ultimate beneficiary). While this seems like a straightforward arrangement, what happens when the relationship sours, and there is no clear written agreement?" },
+      { type: "p", text: "A handshake or a verbal agreement may seem sufficient among trusted partners, but in the realm of Australian corporate law, relying solely on informal understandings can lead to catastrophic legal and financial consequences." },
+      { type: "h3", text: "The Legal Reality: Nominee vs. Beneficiary" },
+      { type: "p", text: "Under Australian law, the starting premise of a nominee arrangement is that legal ownership rests with the nominee, while the beneficial (or equitable) ownership remains with the nominator. However, proving this beneficial ownership in the event of a dispute can be an uphill battle." },
+      { type: "p", text: "When legal disputes arise regarding share ownership, courts heavily scrutinize the contemporaneous documents. If the formal company register and incorporation documents explicitly list the nominee as the shareholder, and there is no written trust deed or nominee agreement to the contrary, the burden of proof falls entirely on the party claiming beneficial ownership." },
+      { type: "p", text: "Attempting to prove beneficial ownership through retrospective verbal accounts or scattered WeChat messages exposes the case to significant risk. Courts must navigate conflicting memories, and the outcome becomes inherently unpredictable." },
+      { type: "h3", text: "The Danger of “Breach of Fiduciary Duty”" },
+      { type: "p", text: "The risks escalate significantly if the nominee takes an active role in the business or the management of the shares." },
+      { type: "p", text: "A common pitfall occurs when a nominee attempts to argue that they were “simply passing on messages” or acting as a mere conduit between the company and the beneficiary. If evidence—such as emails or text messages—reveals that the nominee actively adopted false information, encouraged further financial contributions based on misleading premises, or made unilateral decisions regarding the shares, they are no longer just a passive conduit." },
+      { type: "p", text: "In such scenarios, the nominee may face serious allegations of Breach of Fiduciary Duty. A fiduciary is legally obligated to act in the utmost good faith and in the best interests of the beneficiary. Encouraging investments on false pretenses or transferring shares without proper authorization are severe breaches that can result in the nominee being held personally liable for the beneficiary's financial losses, along with potentially carrying the burden of extensive legal costs for all involved parties." },
+      { type: "h3", text: "Practical Takeaways: How to Protect Your Investments" },
+      { type: "p", text: "To avoid the devastating consequences of undocumented nominee arrangements, consider the following proactive steps:" },
+      { type: "ul", items: [
+        "Document Everything in Writing: Never rely on verbal agreements or informal chat messages. A formal Nominee Agreement or Declaration of Trust must be drafted by a qualified solicitor before any shares are issued or money changes hands.",
+        "Maintain Clear Financial Records: Ensure that the flow of funds clearly traces back to the ultimate beneficiary. If the beneficiary paid for the shares, the bank transfers should reflect this directly, rather than funneling money through ambiguous intermediary accounts.",
+        "Understand the Nominee’s Role: If you are acting as a nominee, clearly understand your legal obligations. Avoid taking active management steps or advising the beneficiary without explicit, written instructions.",
+      ] },
+      { type: "h3", text: "Conclusion" },
+      { type: "p", text: "The assumption that “we are friends, we understand the arrangement” holds no weight in a courtroom. Failing to properly document a nominee relationship can turn a profitable investment into a costly legal nightmare, potentially risking hundreds of thousands of dollars in legal fees and lost capital." },
+      { type: "p", emphasis: "italic", text: "Disclaimer: The information provided in this article is for general informational purposes only and does not constitute formal legal advice." },
+      { type: "p", emphasis: "bold", text: "If you are currently navigating a complex shareholder dispute or need to formalize a nominee arrangement to protect your assets, contact the experienced litigation team at United Associates Barristers and Solicitors today to safeguard your commercial interests." },
+    ],
+  },
   {
     slug: "gun-control-in-australia",
     title: "Gun Control in Australia – Overview of Gun Laws and Their Impact",

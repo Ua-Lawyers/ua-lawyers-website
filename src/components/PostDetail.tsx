@@ -68,7 +68,20 @@ export default function PostDetail({ post }: { post: Post }) {
                     ))}
                   </ul>
                 );
-              return <p key={i}>{block.text}</p>;
+              return (
+                <p
+                  key={i}
+                  className={
+                    block.emphasis === "italic"
+                      ? "italic"
+                      : block.emphasis === "bold"
+                        ? "font-bold"
+                        : undefined
+                  }
+                >
+                  {block.text}
+                </p>
+              );
             })}
           </div>
         </div>
