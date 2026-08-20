@@ -19,6 +19,37 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "pre-settlement-grey-zone-handing-over-keys-early",
+    title:
+      "The Pre-Settlement “Grey Zone”: Why Handing Over the Keys Too Early Could Cost You Your Personal Assets",
+    heading:
+      "The Pre-Settlement “Grey Zone”: Why Handing Over the Keys Too Early Could Cost You Your Personal Assets",
+    metaDesc:
+      "Letting a buyer operate your business before formal settlement creates a legal “grey zone”. Learn how handing over the keys too early can expose your personal assets, and how to protect yourself.",
+    date: "2026-08-20",
+    image: "/images/posts/eviction-ban.jpg",
+    categories: ["Commercial Litigation", "Property Law", "Legal Insights"],
+    tags: ["settlement"],
+    body: [
+      { type: "p", text: "Selling a commercial business is a complex milestone, often accompanied by unexpected hurdles. It is incredibly common for a delay to occur in the formal settlement process, often due to issues like waiting for a landlord’s consent to transfer the lease. To keep the commercial momentum alive, a purchaser might propose a transitional “Licence Agreement”, suggesting they take over and operate the business as an agent prior to formal settlement." },
+      { type: "p", text: "On the surface, this feels like a win-win: the buyer starts making money, and the seller steps away from daily operations. However, from a legal perspective, this creates an exceptionally high-risk window between the signing date and any potential formal settlement." },
+      { type: "h3", text: "The Uninsured Nightmare" },
+      { type: "p", text: "Consider a scenario where a critical part of your business premises—such as a kitchen area—has a title defect and lacks valid commercial insurance. During the normal course of business, this is already a major liability. But what happens if you hand the keys over to a purchaser to run the shop as your \"agent,\" and disaster strikes?" },
+      { type: "p", text: "Imagine a fire breaks out, or a staff member suffers a severe slip-and-fall injury in that specific area. Because the legal transfer of the business hasn't officially occurred, you are still the legal tenant. The absence of lawful possession and valid commercial insurance means any third-party claims will likely bypass corporate protection." },
+      { type: "h3", text: "How to Protect Yourself" },
+      { type: "p", text: "A temporary transitional arrangement is legally completely incapable of rectifying the fundamental defects of property ownership or a lack of commercial insurance. If you must allow a purchaser to commence operations before settlement, you must implement ironclad protective measures:" },
+      { type: "ul", items: [
+        { lead: "Mandatory Insurance:", text: "You must strictly require the purchaser to take out their own insurance during the agency operation period. Do not let anyone behind the counter until they provide a valid Certificate of Currency to you before commencing operations." },
+        { lead: "Narrow the Guarantees:", text: "Ensure your lawyer explicitly excludes losses resulting from pre-existing insurance issues or landlord disputes from any personal guarantee clauses. Limit your liability exclusively to intentional acts or negligence." },
+        { lead: "Clear Financial Boundaries:", text: "The agreement must clearly dictate that all operational costs during the transitional period are borne by the purchaser, ensuring you are not responsible for their debts." },
+      ] },
+      { type: "h3", text: "Conclusion" },
+      { type: "p", text: "The period before a formal settlement is a legal “grey zone” filled with hidden traps. Never let commercial eagerness override legal prudence. Always have an experienced commercial lawyer review any transitional or agency agreements to ensure your life's work—and your personal assets—remain fully protected." },
+      { type: "p", emphasis: "italic", text: "Disclaimer: The information provided in this article is for general informational purposes only and does not constitute formal legal advice." },
+      { type: "p", emphasis: "bold", text: "If you are currently navigating a complex shareholder dispute or need to formalize a nominee arrangement to protect your assets, contact the experienced litigation team at United Associates Barristers and Solicitors today to safeguard your commercial interests." },
+    ],
+  },
+  {
     slug: "hidden-price-of-wholesale-client-status",
     title:
       "The Hidden Price of the “Wholesale Client” Status: What Australian Legal Protections Are You Giving Up?",
