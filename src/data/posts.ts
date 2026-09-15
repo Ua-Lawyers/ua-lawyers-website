@@ -19,6 +19,72 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "when-is-fighting-back-self-defence",
+    title:
+      "When Can Fighting Back After Being Attacked Be Considered Self-Defence?",
+    heading:
+      "When Can Fighting Back After Being Attacked Be Considered Self-Defence?",
+    metaDesc:
+      "Fighting back after being attacked in Victoria is not automatically an offence. Learn how self-defence works under section 322K of the Crimes Act 1958 (Vic) and when a response is reasonable.",
+    date: "2026-09-15",
+    image: "/images/posts/gun-control.jpg",
+    categories: ["Criminal Defence", "Legal Insights"],
+    tags: ["self-defence"],
+    body: [
+      { type: "p", text: "In Melbourne, fighting back after being attacked does not necessarily mean that you have committed an offence. The key questions are why you responded and whether the force you used was reasonable in the circumstances." },
+      { type: "p", text: "Under Section 322K of the Crimes Act 1958 (Vic), a person may rely on self-defence if their conduct was carried out to protect themselves or another person, and the conduct was a reasonable response to the circumstances as they perceived them." },
+      { type: "p", text: "For example, imagine a man is involved in a verbal argument with another person on a Melbourne street. The other person suddenly grabs his clothing and pushes him against a wall. The man tries to move away, but the other person continues to approach him and appears ready to attack again." },
+      { type: "p", text: "In response, the man pushes the other person away and immediately leaves the area." },
+      { type: "p", text: "If the matter were investigated by police, this conduct could potentially fall within the scope of self-defence." },
+      { type: "p", text: "First, there may have been an immediate or continuing threat, as the other person had already used physical force and appeared likely to continue the confrontation." },
+      { type: "p", text: "Second, the man's purpose was to stop the attack and protect himself, rather than to injure or punish the other person." },
+      { type: "p", text: "Third, pushing the person away to create distance and leave the situation may be considered a reasonable response to the level of danger involved." },
+      { type: "p", text: "However, the situation may be viewed differently if the man continues the confrontation after the danger has ended. For example, if the other person stops attacking and walks away, but the man follows and begins punching or kicking them, the conduct may no longer be considered self-defence. At that point, the purpose of the conduct may be seen as retaliation rather than protection." },
+      { type: "p", text: "Therefore, under Australian law, the key issue is not simply who threw the first punch. The more important questions are:" },
+      { type: "p", emphasis: "bold", text: "Was there an immediate danger, and was your response genuinely aimed at stopping that danger?" },
+    ],
+  },
+  {
+    slug: "misleading-conduct-in-australian-property-transactions",
+    title:
+      "Misleading Conduct in Australian Property Transactions: What Can Buyers Do?",
+    heading:
+      "Misleading Conduct in Australian Property Transactions: What Can Buyers Do?",
+    metaDesc:
+      "If a developer, vendor or agent provides false or incomplete information in a property deal, it may breach section 18 of the Australian Consumer Law. Learn what buyers can do to seek compensation.",
+    date: "2026-09-15",
+    image: "/images/posts/property.jpg",
+    categories: ["Property Law", "Legal Insights"],
+    tags: ["Property"],
+    body: [
+      { type: "p", text: "In Australian property transactions, buyers often rely on information provided by developers, vendors or agents when making significant decisions. If that information involves false representations, material omissions or the concealment of important facts, it may constitute misleading or deceptive conduct under section 18 of the Australian Consumer Law (ACL)." },
+      { type: "p", text: "Under section 236 of the ACL, buyers who suffer loss or damage as a result of misleading conduct may be able to seek compensation, subject to the applicable legal requirements." },
+      { type: "h3", text: "What May Constitute Misleading Conduct?" },
+      { type: "p", text: "Misleading conduct does not necessarily involve an outright lie. It may include:" },
+      { type: "ul", items: [
+        "Concealing known defects in a property;",
+        "Making unsupported representations about project risks or financial conditions;",
+        "Failing to disclose the true transaction party or the involvement of related entities;",
+        "Providing incomplete information that creates a misleading overall impression.",
+      ] },
+      { type: "p", text: "Whether conduct is misleading depends on the circumstances of each transaction." },
+      { type: "h3", text: "What Does a Buyer Need to Establish?" },
+      { type: "p", text: "Showing that information was inaccurate may not be sufficient. A buyer generally also needs to establish that the conduct influenced their decision and that there is a sufficient causal connection between the conduct and the loss suffered." },
+      { type: "p", text: "A key question is:" },
+      { type: "p", text: "Would you have proceeded with the transaction if you had known the true circumstances?" },
+      { type: "h3", text: "How Can a Lawyer Help?" },
+      { type: "p", text: "If you believe you have been misled in a property transaction, a lawyer can assist with:" },
+      { type: "ul", items: [
+        "Reviewing contracts and disclosure documents",
+        "Assessing potential breaches of section 18 of the ACL",
+        "Assessing loss and causation",
+        "Identifying and preserving relevant evidence",
+        "Negotiating compensation or taking further legal action",
+      ] },
+      { type: "p", text: "Property transactions often involve significant financial commitments. If information provided by a developer, vendor or agent differs materially from the actual circumstances, obtaining legal advice early can help you assess your position and determine the appropriate next steps." },
+    ],
+  },
+  {
     slug: "pre-settlement-grey-zone-handing-over-keys-early",
     title:
       "The Pre-Settlement “Grey Zone”: Why Handing Over the Keys Too Early Could Cost You Your Personal Assets",
