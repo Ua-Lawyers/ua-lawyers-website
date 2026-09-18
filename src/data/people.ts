@@ -111,7 +111,7 @@ export const people: Person[] = [
   {
     slug: "jingjing-luan",
     name: "Jingjing Luan",
-    role: "Lawyer",
+    role: "Chinese Law Specialist",
     photo: "/images/people/jingjing-luan.png",
     title: "Jingjing Luan – United Associates Barristers & Solicitors",
     metaDesc:
