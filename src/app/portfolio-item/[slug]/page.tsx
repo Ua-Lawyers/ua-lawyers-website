@@ -96,11 +96,13 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
                 <h2 className="text-xl font-semibold">
                   Work with {person.name.split(" ")[0]}
                 </h2>
-                <p className="mt-3 leading-relaxed text-ink-muted">
-                  {person.name} advises clients of {site.shortName}
-                  {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
-                  To arrange a consultation, get in touch with our Melbourne office.
-                </p>
+                {person.slug !== "jingjing-luan" && (
+                  <p className="mt-3 leading-relaxed text-ink-muted">
+                    {person.name} advises clients of {site.shortName}
+                    {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
+                    To arrange a consultation, get in touch with our Melbourne office.
+                  </p>
+                )}
                 <Link
                   href="/contact-us"
                   className="mt-6 inline-block rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
@@ -166,21 +168,23 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
             {areas.length > 0 && (
               <div className="mt-8 border-t border-hairline pt-6">
                 <h2 className="text-lg font-medium">Expertise</h2>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {areas.map((area) => {
-                    const target = services.find((s) => s.name === area);
-                    return (
-                      <li key={area}>
-                        <Link
-                          href={`/${target?.slug ?? ""}`}
-                          className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-dark"
-                        >
-                          {area}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {person.slug !== "jingjing-luan" && (
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {areas.map((area) => {
+                      const target = services.find((s) => s.name === area);
+                      return (
+                        <li key={area}>
+                          <Link
+                            href={`/${target?.slug ?? ""}`}
+                            className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-dark"
+                          >
+                            {area}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
               </div>
             )}
           </aside>
