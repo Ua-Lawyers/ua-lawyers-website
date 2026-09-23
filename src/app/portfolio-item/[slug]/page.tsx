@@ -100,15 +100,17 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
                 <h2 className="text-xl font-semibold">
                   Work with {person.name.split(" ")[0]}
                 </h2>
-                <p className="mt-3 leading-relaxed text-ink-muted">
-                  {person.summary ?? (
-                    <>
-                      {person.name} advises clients of {site.shortName}
-                      {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
-                      To arrange a consultation, get in touch with our Melbourne office.
-                    </>
-                  )}
-                </p>
+                {person.summary !== "" && (
+                  <p className="mt-3 leading-relaxed text-ink-muted">
+                    {person.summary ?? (
+                      <>
+                        {person.name} advises clients of {site.shortName}
+                        {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
+                        To arrange a consultation, get in touch with our Melbourne office.
+                      </>
+                    )}
+                  </p>
+                )}
                 <Link
                   href="/contact-us"
                   className="mt-6 inline-block rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
