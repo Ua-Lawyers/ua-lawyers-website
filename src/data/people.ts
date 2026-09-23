@@ -77,7 +77,7 @@ export const people: Person[] = [
   {
     slug: "louis-xu",
     name: "Louis Xu",
-    role: "Patent Examiner & Director",
+    role: "Patent Examiner / Director of Non-Legal",
     photo: "/images/people/louis-xu.jpg",
     title: "Louis Xu – Expert Lawyer at United Associates Barristers & Solicitors",
     metaDesc:
@@ -85,15 +85,12 @@ export const people: Person[] = [
     phone: "(03) 8840 6566",
     email: "yifei.xu@ualawyers.com.au",
     about: [
-      "Louis has been deeply engaged in the field of intellectual property for over eight years, specialising in patent applications and infringement analysis in the biopharmaceutical sector. With extensive practical experience in patent law, he has worked closely with cutting-edge biotechnology, understanding the critical link between technological innovation and intellectual property protection. He has played a key role in patent portfolio development and commercialisation across multiple high-impact technological domains.",
-      "In the field of biology, Louis has led and facilitated the commercialisation of core technologies such as protein sequencing and spatial transcriptomics. These innovations are vital to the development of novel therapeutic solutions and have broad applications in personalised medicine and biotechnology research, providing strong support for industry advancements.",
-      "Currently, Louis serves as the Overseas General Manager of Tong Hengyuan Intellectual Property Agency, where he brings extensive expertise in global IP management and strategic planning. He is particularly skilled in developing IP strategies for high-tech research achievements at the industrialisation stage. With deep knowledge in biopharmaceuticals, chemical engineering, agriculture, and zoology, he stays at the forefront of industry developments, providing enterprises with effective intellectual property protection and commercialisation strategies.",
+      "Louis is an intellectual property specialist with over eight years of experience in patent examination, patent applications, infringement analysis and technology commercialisation, with a particular focus on biopharmaceutical and chemical technologies. As a former Australian Patent Examiner, he developed extensive experience in assessing the novelty, inventive step and technical scope of complex biomedical and chemical inventions. This background gives him a strong understanding of patent examination, portfolio development and the protection of emerging technologies.",
+      "He has supported the commercialisation of advanced biotechnology, including protein sequencing and spatial transcriptomics, helping align research outcomes with intellectual property and commercial strategies. His technical expertise also extends across biotechnology, chemical engineering, agriculture and zoology.",
+      "Since 2022, Louis has held senior management positions within a law firm, gaining substantial experience in organisational leadership, client management and strategic development.",
     ],
-    qualifications: ["Member of Australian Building and Property Association (VIC)"],
-    education: [
-      "Master of Agricultural Sciences – University of Melbourne",
-      "Bachelor of Science (Environmental Sciences) – South China Agricultural University",
-    ],
+    qualifications: [],
+    education: [],
     bioStatus: "complete",
   },
   {
