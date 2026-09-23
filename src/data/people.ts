@@ -112,11 +112,11 @@ export const people: Person[] = [
   {
     slug: "qinyi-li",
     name: "Ada Yin",
-    role: "Lawyer",
+    role: "Paralegal",
     photo: "/images/people/qinyi-li.png",
     title: "Ada Yin – United Associates Barristers & Solicitors",
     metaDesc:
-      "Meet Ada Yin, a lawyer at United Associates Barristers & Solicitors, practising in family law and commercial law.",
+      "Meet Ada Yin, a paralegal at United Associates Barristers & Solicitors, practising in family law and commercial law.",
     about: [],
     qualifications: [],
     education: [],
