@@ -120,6 +120,8 @@ export const people: Person[] = [
     about: [],
     qualifications: [],
     education: [],
+    summary:
+      "Ada Yin assists clients of UA Lawyers on commercial litigation, corporate & commercial, family law matters.",
     bioStatus: "needs-content",
   },
   {
