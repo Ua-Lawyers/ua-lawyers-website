@@ -36,6 +36,8 @@ export type Person = {
    * (non-linked) tags replace the practice areas otherwise derived from the services list.
    */
   expertise?: string[];
+  /** Extra plain Expertise tags appended after the derived/custom practice-area tags. */
+  extraExpertise?: string[];
   /**
    * `needs-content` means the live WordPress portfolio item for this slug still holds a
    * former staff member's bio (e.g. /portfolio-item/james-xi/ renders "Wuhao Wang"), so the
@@ -50,7 +52,7 @@ export const people: Person[] = [
   {
     slug: "shen-li",
     name: "Shen Li",
-    role: "Principal Lawyer & Director",
+    role: "Principal / Director of Legal",
     photo: "/images/people/shen-li.jpg",
     title: "Shen Li – Dedicated Lawyer at United Associates Barristers & Solicitors",
     metaDesc:
@@ -72,6 +74,7 @@ export const people: Person[] = [
       "Juris Doctor (JD) – Australian National University",
       "Bachelor of Commerce (Finance and Accounting) – University of Melbourne",
     ],
+    extraExpertise: ["Chinese Law", "Data Security"],
     bioStatus: "complete",
   },
   {

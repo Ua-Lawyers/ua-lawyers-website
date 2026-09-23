@@ -199,7 +199,9 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
               />
             </div>
 
-            {(person.expertise?.length || areas.length > 0) && (
+            {(person.expertise?.length ||
+              areas.length > 0 ||
+              person.extraExpertise?.length) && (
               <div className="mt-8 border-t border-hairline pt-6">
                 <h2 className="text-lg font-medium">Expertise</h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
@@ -224,6 +226,13 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
                           </li>
                         );
                       })}
+                  {person.extraExpertise?.map((item) => (
+                    <li key={item}>
+                      <span className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
