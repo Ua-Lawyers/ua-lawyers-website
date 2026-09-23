@@ -32,7 +32,11 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
   const areas = practiceAreasFor(person.slug);
   const phone = person.phone ?? site.phone;
   const email = person.email ?? site.email;
-  const hasExperience = person.qualifications.length > 0 || person.education.length > 0;
+  const hasExperience =
+    !!person.experienceSummary ||
+    (person.experience?.length ?? 0) > 0 ||
+    person.qualifications.length > 0 ||
+    person.education.length > 0;
 
   return (
     <>
@@ -96,13 +100,15 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
                 <h2 className="text-xl font-semibold">
                   Work with {person.name.split(" ")[0]}
                 </h2>
-                {person.slug !== "jingjing-luan" && (
-                  <p className="mt-3 leading-relaxed text-ink-muted">
-                    {person.name} advises clients of {site.shortName}
-                    {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
-                    To arrange a consultation, get in touch with our Melbourne office.
-                  </p>
-                )}
+                <p className="mt-3 leading-relaxed text-ink-muted">
+                  {person.summary ?? (
+                    <>
+                      {person.name} advises clients of {site.shortName}
+                      {areas.length > 0 ? ` on ${areas.join(", ").toLowerCase()} matters` : ""}.
+                      To arrange a consultation, get in touch with our Melbourne office.
+                    </>
+                  )}
+                </p>
                 <Link
                   href="/contact-us"
                   className="mt-6 inline-block rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
@@ -114,8 +120,34 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
 
             {hasExperience && (
               <div className="mt-16">
-                <h2 className="text-2xl font-semibold">Professional Experience</h2>
-                <span className="mt-4 block h-0.5 w-12 bg-brand" />
+                {person.slug !== "jingjing-luan" && (
+                  <>
+                    <h2 className="text-2xl font-semibold">Professional Experience</h2>
+                    <span className="mt-4 block h-0.5 w-12 bg-brand" />
+                  </>
+                )}
+
+                {person.experienceSummary && (
+                  <p className="leading-relaxed text-ink-muted">
+                    {person.experienceSummary}
+                  </p>
+                )}
+
+                {person.experience && person.experience.length > 0 && (
+                  <div className="mt-8 border-t border-hairline pt-6">
+                    <h3 className="text-lg font-medium">Experience</h3>
+                    <ul className="mt-4 space-y-2.5">
+                      {person.experience.map((item) => (
+                        <li key={item} className="flex gap-3 text-ink-muted">
+                          <span aria-hidden="true" className="text-brand">
+                            •
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {person.qualifications.length > 0 && (
                   <div className="mt-8 border-t border-hairline pt-6">
@@ -165,26 +197,32 @@ export default async function PersonPage({ params }: { params: Promise<Params> }
               />
             </div>
 
-            {areas.length > 0 && (
+            {(person.expertise?.length || areas.length > 0) && (
               <div className="mt-8 border-t border-hairline pt-6">
                 <h2 className="text-lg font-medium">Expertise</h2>
-                {person.slug !== "jingjing-luan" && (
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {areas.map((area) => {
-                      const target = services.find((s) => s.name === area);
-                      return (
-                        <li key={area}>
-                          <Link
-                            href={`/${target?.slug ?? ""}`}
-                            className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-dark"
-                          >
-                            {area}
-                          </Link>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {person.expertise
+                    ? person.expertise.map((item) => (
+                        <li key={item}>
+                          <span className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white">
+                            {item}
+                          </span>
                         </li>
-                      );
-                    })}
-                  </ul>
-                )}
+                      ))
+                    : areas.map((area) => {
+                        const target = services.find((s) => s.name === area);
+                        return (
+                          <li key={area}>
+                            <Link
+                              href={`/${target?.slug ?? ""}`}
+                              className="inline-block rounded-sm bg-brand px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-dark"
+                            >
+                              {area}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                </ul>
               </div>
             )}
           </aside>

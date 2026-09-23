@@ -23,6 +23,20 @@ export type Person = {
   qualifications: string[];
   education: string[];
   /**
+   * Optional one-line summary for the short "Work with" profile format. When set, it
+   * replaces the auto-generated sentence built from the derived practice areas.
+   */
+  summary?: string;
+  /** Optional one-line intro shown under the "Professional Experience" heading. */
+  experienceSummary?: string;
+  /** Optional career highlights shown under the "Professional Experience" heading. */
+  experience?: string[];
+  /**
+   * Optional custom Expertise tags shown on the profile sidebar. When set, these plain
+   * (non-linked) tags replace the practice areas otherwise derived from the services list.
+   */
+  expertise?: string[];
+  /**
    * `needs-content` means the live WordPress portfolio item for this slug still holds a
    * former staff member's bio (e.g. /portfolio-item/james-xi/ renders "Wuhao Wang"), so the
    * About/qualifications/contact fields below are intentionally empty rather than wrong.
@@ -111,15 +125,27 @@ export const people: Person[] = [
   {
     slug: "jingjing-luan",
     name: "Jingjing Luan",
-    role: "Chinese Law Specialist",
+    role: "Chinese Law Specialist | Registered Foreign Lawyer (PRC Law)",
     photo: "/images/people/jingjing-luan.png",
     title: "Jingjing Luan – United Associates Barristers & Solicitors",
     metaDesc:
-      "Meet Jingjing Luan, a lawyer at United Associates Barristers & Solicitors, practising across migration, property, family and employment law.",
-    about: [],
+      "Jingjing Luan is a Chinese Law Specialist and Registered Foreign Lawyer in Victoria with over 20 years of experience in the Chinese judicial system, advising on PRC law and cross-border disputes.",
+    about: [
+      "Jingjing Luan is a PRC-qualified legal professional and Registered Foreign Lawyer in Victoria with over 20 years of experience in the Chinese judicial system.",
+      "Prior to joining United Associates, Jingjing served in various judicial roles at the Shenyang Intermediate People’s Court, including as a Judge and Deputy Director of the Case Management Office. Her experience spans civil and commercial litigation, enforcement proceedings, judicial review and retrial matters, as well as legal research and analysis.",
+      "Jingjing has particular experience in the enforcement of civil and commercial judgments in China. At United Associates, she works closely with our Australian-qualified lawyers on cross-border disputes, particularly matters involving the recognition and enforcement of Chinese court judgments in Australia. She also advises on PRC law in relation to corporate governance, regulatory compliance, cross-border transactions and other China-related legal matters.",
+      "Jingjing is registered with the Victorian Legal Services Board and Commissioner as a Foreign Lawyer, enabling her to practise PRC law in Victoria. She provides an important bridge between the Chinese and Australian legal systems and assists clients in navigating complex legal issues involving both jurisdictions.",
+    ],
     qualifications: [],
     education: [],
-    bioStatus: "needs-content",
+    expertise: [
+      "PRC Law",
+      "Cross-Border Disputes",
+      "Enforcement of Chinese Judgments",
+      "Corporate Governance & Compliance",
+      "Cross-Border Transactions",
+    ],
+    bioStatus: "complete",
   },
   {
     slug: "wilson-zhang",
