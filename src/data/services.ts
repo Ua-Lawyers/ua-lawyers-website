@@ -220,7 +220,11 @@ export const services: Service[] = [
     subServices: [
       "Notarisation",
       "Hague Apostille Certification",
-      "Document Legalisation",
+      "Document Certification",
+      "Witnessing Signatures",
+      "Commercial Documents",
+      "Property and Inheritance",
+      "Consular Legalisation",
     ],
     contacts: ["leo-lee"],
   },
