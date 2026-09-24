@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ServiceDetail from "@/components/ServiceDetail";
+import NotaryServiceDetail from "@/components/NotaryServiceDetail";
 import PostDetail from "@/components/PostDetail";
 import { services, serviceBySlug } from "@/data/services";
 import { posts, postBySlug } from "@/data/posts";
@@ -34,7 +35,10 @@ export default async function SlugPage({ params }: { params: Promise<Params> }) 
   const { slug } = await params;
 
   const service = serviceBySlug(slug);
-  if (service) return <ServiceDetail service={service} />;
+  if (service) {
+    if (slug === "notary-public") return <NotaryServiceDetail service={service} />;
+    return <ServiceDetail service={service} />;
+  }
 
   const post = postBySlug(slug);
   if (post) return <PostDetail post={post} />;

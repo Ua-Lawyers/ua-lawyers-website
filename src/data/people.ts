@@ -6,7 +6,8 @@ export type PersonSlug =
   | "james-xi"
   | "qinyi-li"
   | "jingjing-luan"
-  | "wilson-zhang";
+  | "wilson-zhang"
+  | "leo-lee";
 
 export type Person = {
   slug: PersonSlug;
@@ -160,6 +161,21 @@ export const people: Person[] = [
     qualifications: [],
     education: [],
     bioStatus: "needs-content",
+  },
+  {
+    slug: "leo-lee",
+    name: "Leo Lee",
+    role: "Lawyer",
+    photo: "/images/people/leo-lee.png",
+    title: "Leo Lee – United Associates Barristers & Solicitors",
+    metaDesc:
+      "Meet Leo Lee, a lawyer and qualified notary public at United Associates Barristers & Solicitors, with over 16 years of experience and a fellow of the Society of Notaries of Victoria.",
+    about: [
+      "Mr Lee has been practising law since 2009, amassing 16 years of extensive experience. He has established a solid foundation for the public notary practice with his profound expertise. He is a qualified notary public and a fellow of the Society of Notaries of Victoria.",
+    ],
+    qualifications: [],
+    education: [],
+    bioStatus: "complete",
   },
 ];
 
