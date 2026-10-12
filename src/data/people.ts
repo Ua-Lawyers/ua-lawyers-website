@@ -7,7 +7,8 @@ export type PersonSlug =
   | "qinyi-li"
   | "jingjing-luan"
   | "wilson-zhang"
-  | "leo-lee";
+  | "leo-lee"
+  | "wei-wang";
 
 export type Person = {
   slug: PersonSlug;
@@ -172,6 +173,21 @@ export const people: Person[] = [
       "Meet Leo Lee, a lawyer and qualified notary public at United Associates Barristers & Solicitors, with over 16 years of experience and a fellow of the Society of Notaries of Victoria.",
     about: [
       "Mr Lee has been practising law since 2009, amassing 16 years of extensive experience. He has established a solid foundation for the public notary practice with his profound expertise. He is a qualified notary public and a fellow of the Society of Notaries of Victoria.",
+    ],
+    qualifications: [],
+    education: [],
+    bioStatus: "complete",
+  },
+  {
+    slug: "wei-wang",
+    name: "Wei Wang",
+    role: "Senior Associate",
+    photo: "/images/people/wei-wang.jpg",
+    title: "Wei Wang – United Associates Barristers & Solicitors",
+    metaDesc:
+      "Meet Wei Wang, a Senior Associate at United Associates Barristers & Solicitors, with over 20 years of experience in commercial and family law.",
+    about: [
+      "Wei Wang is an experienced lawyer with over 20 years of legal practice, specialising primarily in commercial and family law. He previously served as the Principal of Wang Wei Lawyers before joining UA in 2026. In addition to managing his own matters, he supervises and trains junior lawyers.",
     ],
     qualifications: [],
     education: [],
