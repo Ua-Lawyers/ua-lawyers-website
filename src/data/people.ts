@@ -161,6 +161,7 @@ export const people: Person[] = [
     about: [],
     qualifications: [],
     education: [],
+    summary: "",
     bioStatus: "needs-content",
   },
   {
