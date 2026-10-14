@@ -99,7 +99,7 @@ export const people: Person[] = [
   },
   {
     slug: "james-xi",
-    name: "James Xi",
+    name: "James Xi (Jiming Xi)",
     role: "Lawyer",
     photo: "/images/people/james-xi.png",
     title: "James Xi – United Associates Barristers & Solicitors",
@@ -151,7 +151,7 @@ export const people: Person[] = [
   },
   {
     slug: "leo-lee",
-    name: "Leo Lee",
+    name: "Leo Lee (Xing Li)",
     role: "Lawyer",
     photo: "/images/people/leo-lee.png",
     title: "Leo Lee – United Associates Barristers & Solicitors",
@@ -166,8 +166,8 @@ export const people: Person[] = [
   },
   {
     slug: "wei-wang",
-    name: "Wei Wang",
-    role: "Senior Associate",
+    name: "Wayne Wei Wong (Wei Wang)",
+    role: "Special Counsel",
     photo: "/images/people/wei-wang.jpg",
     title: "Wei Wang – United Associates Barristers & Solicitors",
     metaDesc:
