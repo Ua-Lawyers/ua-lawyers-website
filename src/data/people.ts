@@ -6,7 +6,6 @@ export type PersonSlug =
   | "james-xi"
   | "qinyi-li"
   | "jingjing-luan"
-  | "wilson-zhang"
   | "leo-lee"
   | "wei-wang";
 
@@ -149,20 +148,6 @@ export const people: Person[] = [
       "Cross-Border Transactions",
     ],
     bioStatus: "complete",
-  },
-  {
-    slug: "wilson-zhang",
-    name: "Wilson Zhang",
-    role: "Paralegal",
-    photo: "/images/people/wilson-zhang.png",
-    title: "Wilson Zhang – United Associates Barristers & Solicitors",
-    metaDesc:
-      "Meet Wilson Zhang, a paralegal at United Associates Barristers & Solicitors.",
-    about: [],
-    qualifications: [],
-    education: [],
-    summary: "",
-    bioStatus: "needs-content",
   },
   {
     slug: "leo-lee",
